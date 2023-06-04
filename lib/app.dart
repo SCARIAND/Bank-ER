@@ -11,7 +11,7 @@ class App extends StatefulWidget {
   State<App> createState() => _AppState();
 }
 
-class _AppState extends State<App> {git
+class _AppState extends State<App> {
   final _doneNotifier = DoneNotifier();
   @override
   Widget build(BuildContext context) {
