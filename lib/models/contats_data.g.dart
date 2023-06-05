@@ -9,7 +9,8 @@
 
 
 
-import 'contats_data.dart';
+
+part of 'contats_data.dart';
 
 ContactsData _$ContactDataFromJson(Map<String, dynamic> json) => ContactsData(
 

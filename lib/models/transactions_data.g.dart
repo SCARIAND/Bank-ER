@@ -10,7 +10,7 @@
 
 
 
-import 'transactions_data.dart';
+part of 'transactions_data.dart';
 
 TransactData _$InfoDataFromJson(Map<String, dynamic> json) => TransactData(
 

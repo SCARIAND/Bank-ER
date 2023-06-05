@@ -1,5 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
 
+
+part 'transactions_data.g.dart';
+
+
+
 @JsonSerializable()
 class TransactData {
   final String category;

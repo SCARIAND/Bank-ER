@@ -9,7 +9,7 @@
 
 
 
-import 'balance_data.dart';
+part of 'balance_data.dart';
 
 
 BalanceData _$ContactDataFromJson(Map<String, dynamic> json) => BalanceData(

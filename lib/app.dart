@@ -17,10 +17,11 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return DoneState(
       notifier: _doneNotifier,
-        child:  const MaterialApp(
-
+      child: MaterialApp(
+        theme: ThemeData(fontFamily: 'Inter'),
         debugShowCheckedModeBanner: false,
         home: HomeScreen(),
-        ),);
+      ),
+    );
   }
 }

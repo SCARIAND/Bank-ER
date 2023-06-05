@@ -1,6 +1,11 @@
 
 
+
 import 'package:json_annotation/json_annotation.dart';
+
+
+part 'balance_data.g.dart';
+
 
 @JsonSerializable()
 class BalanceData {

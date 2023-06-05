@@ -2,6 +2,9 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
+part 'contats_data.g.dart';
+
+
 @JsonSerializable()
 class ContactsData {
   final String name;
