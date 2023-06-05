@@ -12,7 +12,7 @@
 
 part of 'contats_data.dart';
 
-ContactsData _$ContactDataFromJson(Map<String, dynamic> json) => ContactsData(
+ContactsData _$ContactsDataFromJson(Map<String, dynamic> json) => ContactsData(
 
 
   name: json['name'] as String,
@@ -23,7 +23,7 @@ ContactsData _$ContactDataFromJson(Map<String, dynamic> json) => ContactsData(
 
     );
 
-Map<String, dynamic> _$ContactDataToJson(ContactsData instance) =>
+Map<String, dynamic> _$ContactsDataToJson(ContactsData instance) =>
     <String, dynamic>{
 
       'name': instance.name,

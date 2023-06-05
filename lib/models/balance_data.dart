@@ -21,14 +21,7 @@ class BalanceData {
     required this.earned,
   });
 
-  factory BalanceData.fromJson(Map<String, dynamic> json) {
-    return BalanceData(
-
-      availableBalance: int.parse(json['availableBalance']),
-      spent: int.parse(json['spent']),
-      earned:  int.parse(json['earned']),
-
-
-    );
-  }
+  factory BalanceData.fromJson(Map<String, dynamic> json) =>
+      _$BalanceDataFromJson(json);
 }
+

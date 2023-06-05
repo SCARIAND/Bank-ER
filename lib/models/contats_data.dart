@@ -19,12 +19,7 @@ class ContactsData {
     required this.registered,
   });
 
-  factory ContactsData.fromJson(Map<String, dynamic> json) {
-    return ContactsData(
-      name: json['name'],
-      phone: json['phone'],
-      avatar: json['avatar'],
-      registered: json['registered'],
-    );
-  }
+  factory ContactsData.fromJson(Map<String, dynamic> json) =>
+      _$ContactsDataFromJson(json);
 }
+

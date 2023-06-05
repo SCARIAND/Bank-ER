@@ -12,7 +12,7 @@
 
 part of 'transactions_data.dart';
 
-TransactData _$InfoDataFromJson(Map<String, dynamic> json) => TransactData(
+TransactData _$TransactDataFromJson(Map<String, dynamic> json) => TransactData(
 
 
   category: json['category'] as String,
@@ -22,7 +22,7 @@ TransactData _$InfoDataFromJson(Map<String, dynamic> json) => TransactData(
 
     );
 
-Map<String, dynamic> _$InfoDataToJson(TransactData instance) =>
+Map<String, dynamic> _$TransactDataToJson(TransactData instance) =>
     <String, dynamic>{
 
       'category': instance.category,

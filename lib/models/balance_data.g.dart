@@ -12,7 +12,7 @@
 part of 'balance_data.dart';
 
 
-BalanceData _$ContactDataFromJson(Map<String, dynamic> json) => BalanceData(
+BalanceData _$BalanceDataFromJson(Map<String, dynamic> json) => BalanceData(
 
 
   availableBalance: json['availableBalance'] as int,
@@ -23,7 +23,7 @@ BalanceData _$ContactDataFromJson(Map<String, dynamic> json) => BalanceData(
 
     );
 
-Map<String, dynamic> _$ContactDataToJson(BalanceData instance) =>
+Map<String, dynamic> _$BalanceDataToJson(BalanceData instance) =>
     <String, dynamic>{
 
       'availableBalance': instance.availableBalance,

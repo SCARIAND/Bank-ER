@@ -19,12 +19,6 @@ class TransactData {
     required this.available_amount,
   });
 
-  factory TransactData.fromJson(Map<String, dynamic> json) {
-    return TransactData(
-      category: json['category'],
-      transactions: json['transactions'],
-      total_amount: (json['total_amount']  as num).toDouble(),
-      available_amount: (json['available_amount'] as num).toDouble(),
-    );
-  }
+  factory TransactData.fromJson(Map<String, dynamic> json) =>
+      _$TransactDataFromJson(json);
 }
