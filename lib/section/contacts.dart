@@ -10,7 +10,7 @@ class ContactsUser extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 99,
         child: Row(
           children: [
@@ -33,7 +33,7 @@ class ContactsUser extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(child: SizedBox()),
+            const Expanded(child: SizedBox()),
             TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
@@ -41,7 +41,7 @@ class ContactsUser extends StatelessWidget {
                 foregroundColor: ThemeColors.textBar,
                 padding: const EdgeInsets.all(10.0),
               ),
-              child: Text(
+              child: const Text(
                 'invite',
                 style: TextStyle(
                   fontSize: 14,

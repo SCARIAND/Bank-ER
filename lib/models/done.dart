@@ -1,7 +1,3 @@
-
-
-
-
 import 'contats_data.dart';
 
 class Done {

@@ -1,9 +1,6 @@
-
-
 import 'package:json_annotation/json_annotation.dart';
 
 part 'contats_data.g.dart';
-
 
 @JsonSerializable()
 class ContactsData {
@@ -21,5 +18,8 @@ class ContactsData {
 
   factory ContactsData.fromJson(Map<String, dynamic> json) =>
       _$ContactsDataFromJson(json);
-}
 
+  Map<String, dynamic> toJson() {
+    return _$ContactsDataToJson(this);
+  }
+}

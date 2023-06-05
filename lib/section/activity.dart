@@ -16,7 +16,6 @@ class Activity extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 37, left: 37, right: 37),
       child: Column(
-
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Padding(
@@ -29,11 +28,10 @@ class Activity extends StatelessWidget {
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => TransferScreen()));
+                      builder: (context) => const TransferScreen()));
                 },
                 child: const BoxCard(
                   boxContent: ActivityState(
-
                     icon: Icon(Icons.telegram, color: ThemeColors.textBar),
                     text: 'Transfer',
                   ),
@@ -41,7 +39,8 @@ class Activity extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => TransferAmountPage()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const TransferAmountPage()));
                 },
                 child: const BoxCard(
                   boxContent: ActivityState(
@@ -52,8 +51,8 @@ class Activity extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ExpensesScreen()));
-
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ExpensesScreen()));
                 },
                 child: const BoxCard(
                   boxContent: ActivityState(
@@ -85,24 +84,18 @@ class ActivityState extends StatelessWidget {
     return SizedBox(
       width: 60,
       child: Column(
-
         children: [
           Padding(
             padding: const EdgeInsets.only(bottom: 8.0),
             child: Container(
-
               width: 38,
               height: 38,
               clipBehavior: Clip.hardEdge,
-
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5.0),
                 color: ThemeColors.scaffold,
-
-
               ),
               alignment: Alignment.center,
-
               child: icon,
             ),
           ),

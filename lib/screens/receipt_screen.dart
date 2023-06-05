@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../constants/theme_constants.dart';
 import '../state/done_state.dart';
-//
-// final TextEditingController amountController = TextEditingController();
 
 class ReceiptScreen extends StatelessWidget {
   const ReceiptScreen({Key? key}) : super(key: key);
@@ -12,10 +10,6 @@ class ReceiptScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final done = DoneState.of(context).done;
-
-
-
-
 
     return Scaffold(
         backgroundColor: ThemeColors.scaffold,
@@ -69,27 +63,26 @@ class ReceiptScreen extends StatelessWidget {
                               width: 30,
                               height: 27,
                               margin: const EdgeInsets.all(22),
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
                                   image: AssetImage('assets/images/burger.png'),
                                 ),
                               )),
                         ),
-                        Text('Transfer done', style: ThemeFonts.rr20),
-                        SizedBox(height: 14),
-                        ContentLine(),
+                        const Text('Transfer done', style: ThemeFonts.rr20),
+                        const SizedBox(height: 14),
+                        const ContentLine(),
                       ],
                     ),
                   ),
                 ),
-                 ContentLine(),
+                const ContentLine(),
                 ...done.contactss.map(
                   (contacts) => Padding(
                     padding:
                         const EdgeInsets.only(left: 24, right: 24, top: 172),
-                    child:
-                    Container(
+                    child: SizedBox(
                         height: 99,
                         child: Row(
                           children: [
@@ -108,46 +101,44 @@ class ReceiptScreen extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Recipient', style: ThemeFonts.rs12),
-                                  Text(contacts.name,
-                                      style: ThemeFonts.rr16),
+                                  const Text('Recipient',
+                                      style: ThemeFonts.rs12),
+                                  Text(contacts.name, style: ThemeFonts.rr16),
                                 ],
                               ),
                             ),
-                            Expanded(child: SizedBox()),
+                            const Expanded(child: SizedBox()),
                           ],
                         )),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 12, right: 12, top: 242),
-                  child: Container(
-                      child: Row(
+                  child: Row(
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 18, top: 32),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text('Reference number', style: ThemeFonts.rs12),
                             Text('#D79004321786', style: ThemeFonts.rr16),
                           ],
                         ),
                       ),
-                      Expanded(child: SizedBox()),
+                      const Expanded(child: SizedBox()),
                     ],
-                  )),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 12, right: 12, top: 320),
-                  child: Container(
-                      child: Row(
+                  child: Row(
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 18, top: 32),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text('Amount sent', style: ThemeFonts.rs12),
                             Text('\$', style: ThemeFonts.rr16),
 
@@ -159,15 +150,15 @@ class ReceiptScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 75, top: 32),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text('Transfer fee', style: ThemeFonts.rs12),
                             Text('\$0', style: ThemeFonts.rr16),
                           ],
                         ),
                       ),
-                      Expanded(child: SizedBox()),
+                      const Expanded(child: SizedBox()),
                     ],
-                  )),
+                  ),
                 ),
                 Padding(
                     padding:

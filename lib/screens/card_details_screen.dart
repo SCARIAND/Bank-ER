@@ -18,34 +18,31 @@ class CardDetailsScreen extends StatelessWidget {
             children: [
               Container(
                   height: 290,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30.0),
                       bottomRight: Radius.circular(30.0),
                     ),
                     color: ThemeColors.scaffold,
                   )),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 132.0),
                 child: Center(
-                  child: Text('Your Platnium Card', style: ThemeFonts.rrr20),
+                  child: Text('Your Platinium Card', style: ThemeFonts.rrr20),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 200, left: 71, right: 71),
+              const Padding(
+                padding: EdgeInsets.only(top: 200, left: 71, right: 71),
                 child: PlatCardService(
                   name: 'Adam Wise',
                 ),
               ),
             ],
           ),
-          ActivityCard(),
-          Padding(
-
-            padding: const EdgeInsets.only(top: 48, left: 36,right: 36),
-            child: SettingsUser()
-            ),
-
+          const ActivityCard(),
+          const Padding(
+              padding: EdgeInsets.only(top: 48, left: 36, right: 36),
+              child: SettingsUser()),
         ],
       ),
     );

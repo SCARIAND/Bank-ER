@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:todo/constants/theme_constants.dart';
-import 'package:todo/screens/receipt_screen.dart';
+import 'package:todo/screens/card_details_screen.dart';
+import 'package:todo/screens/home_screen.dart';
 
 class TransferAmountPage extends StatefulWidget {
   const TransferAmountPage({super.key});
@@ -68,9 +69,18 @@ class _TransferAmountPageState extends State<TransferAmountPage> {
             centerTitle: true,
             elevation: 0,
             toolbarHeight: 32,
-            title: Center(
+            title: const Center(
                 child: Text('Transfer Amount   ', style: ThemeFonts.rr20)),
-            leading: Icon(Icons.arrow_back_ios_sharp, color: ThemeColors.text),
+            leading: IconButton(
+              icon: const Icon(
+                Icons.arrow_back_ios_sharp,
+                color: ThemeColors.text,
+              ),
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => HomeScreen()));
+              },
+            ),
             backgroundColor: ThemeColors.container,
           ),
           Stack(
@@ -115,16 +125,7 @@ class _TransferAmountPageState extends State<TransferAmountPage> {
                   title: 'Continue',
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => ReceiptScreen()));
-
-                    // () async {
-                    // ignore: use_build_context_synchronously
-                    // if (await Navigator.pushNamed(context, '/pin') == true) {
-                    // await launchUrl(
-                    //   Uri.parse('https://demo.midtrans.com/'),
-                    // );
-
-                    // ignore: use_build_context_synchronously
+                        builder: (context) => CardDetailsScreen()));
                   },
                 ),
               ),
@@ -206,7 +207,7 @@ class _TransferAmountPageState extends State<TransferAmountPage> {
                 child: Container(
                   width: 130,
                   height: 50,
-                  child: Center(
+                  child: const Center(
                     child: Icon(
                       Icons.arrow_back,
                       color: Colors.black,
@@ -241,7 +242,7 @@ class CustomInputButton extends StatelessWidget {
       child: Container(
         width: 130,
         height: 45,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           shape: BoxShape.rectangle,
           color: ThemeColors.textBar,
         ),

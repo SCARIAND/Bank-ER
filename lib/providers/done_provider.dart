@@ -1,7 +1,5 @@
-
 import '../models/contats_data.dart';
 import '../models/done.dart';
-
 
 class DoneProvider {
   final _done = Done();

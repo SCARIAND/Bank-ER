@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-import '../constants/color_dot.dart';
 import '../constants/theme_constants.dart';
 import 'box_cards.dart';
 
@@ -32,11 +30,8 @@ class _PromoState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-
       Container(
-
-          decoration:
-          BoxDecoration(borderRadius: BorderRadius.circular(5)),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
           child: Image.asset('assets/images/free.png')),
       Padding(
         padding: const EdgeInsets.all(21),
@@ -45,13 +40,12 @@ class _PromoState extends StatelessWidget {
           children: [
             Row(
               children: const [
-               const Text('Personal Information', style: ThemeFonts.rr14),
+                Text('Personal Information', style: ThemeFonts.rr14),
               ],
             ),
-             SizedBox(height: 14),
-             Text(
-                  'You spent \$2,732 on dining out this month. Let’s try to make it lower'),
-
+            const SizedBox(height: 14),
+            const Text(
+                'You spent \$2,732 on dining out this month. Let’s try to make it lower'),
             TextButton(
               onPressed: () {},
               child: const Text(
@@ -65,8 +59,6 @@ class _PromoState extends StatelessWidget {
           ],
         ),
       ),
-
-
     ]);
   }
 }

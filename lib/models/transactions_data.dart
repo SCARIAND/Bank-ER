@@ -1,9 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-
 part 'transactions_data.g.dart';
-
-
 
 @JsonSerializable()
 class TransactData {
@@ -21,4 +18,8 @@ class TransactData {
 
   factory TransactData.fromJson(Map<String, dynamic> json) =>
       _$TransactDataFromJson(json);
+
+  Map<String, dynamic> toJson() {
+    return _$TransactDataToJson(this);
+  }
 }

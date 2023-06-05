@@ -14,10 +14,8 @@ class ThemeColors {
 }
 
 class ThemeFonts {
-
   static const r14 = TextStyle(
     fontSize: 14,
-
     color: ThemeColors.text,
     height: 1.5,
   );
@@ -138,8 +136,6 @@ class ThemeFonts {
     height: 1.5,
   );
 
-
-
   static const r25 = TextStyle(
     fontSize: 25,
     fontWeight: FontWeight.w700,
@@ -160,7 +156,6 @@ class ThemeFonts {
     color: ThemeColors.text,
     height: 1.5,
   );
-
 }
 
 class ContentLine extends StatelessWidget {

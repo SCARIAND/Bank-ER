@@ -67,13 +67,12 @@ class _VerificationState extends StatelessWidget {
             children: const [
               Padding(
                 padding: EdgeInsets.only(right: 20),
-
                 child: Icon(Icons.person, color: ThemeColors.scaffold),
               ),
-              const Text('Personal Information', style: ThemeFonts.rr14),
+              Text('Personal Information', style: ThemeFonts.rr14),
             ],
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(top: 5, bottom: 5, left: 40),
             child: Text(
                 'You spent \$2,732 on dining out this month. Let’s try to make it lower'),
@@ -101,12 +100,13 @@ class _VerificationState extends StatelessWidget {
         children: const [
           Padding(
             padding: EdgeInsets.only(right: 20, bottom: 5),
-            child: Icon(Icons.recent_actors_outlined, color: ThemeColors.scaffold),
+            child:
+                Icon(Icons.recent_actors_outlined, color: ThemeColors.scaffold),
           ),
           //chrome_reader_mode
           Padding(
             padding: EdgeInsets.only(top: 20, bottom: 24),
-            child: const Text('Verification', style: ThemeFonts.rr14),
+            child: Text('Verification', style: ThemeFonts.rr14),
           ),
         ],
       ),
@@ -122,7 +122,7 @@ class _VerificationState extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(top: 19, bottom: 20),
-            child: const Text('Confirm email', style: ThemeFonts.rr14),
+            child: Text('Confirm email', style: ThemeFonts.rr14),
           ),
         ],
       ),

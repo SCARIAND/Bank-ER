@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../constants/theme_constants.dart';
 
 import 'activity.dart';
@@ -14,10 +13,8 @@ class ActivityCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 38, left: 37, right: 37),
       child: Column(
-
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -25,7 +22,6 @@ class ActivityCard extends StatelessWidget {
                 onTap: () {},
                 child: const BoxCard(
                   boxContent: ActivityState(
-
                     icon: Icon(Icons.lock, color: ThemeColors.textBar),
                     text: 'Lock Card',
                   ),
@@ -44,8 +40,7 @@ class ActivityCard extends StatelessWidget {
                 onTap: () {},
                 child: const BoxCard(
                   boxContent: ActivityState(
-                    icon: Icon(Icons.credit_card,
-                        color: ThemeColors.textBar),
+                    icon: Icon(Icons.credit_card, color: ThemeColors.textBar),
                     text: 'Top Up',
                   ),
                 ),

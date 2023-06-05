@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ColorDot extends StatelessWidget {
   final Color? color;
-  ColorDot({Key? key, required this.color}): super(key: key);
+  const ColorDot({Key? key, required this.color}): super(key: key);
 
 @override
 Widget build(BuildContext context){

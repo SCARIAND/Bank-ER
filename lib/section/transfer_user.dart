@@ -15,7 +15,7 @@ class TransferUser extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Transfer',
             style: ThemeFonts.rrr20
 

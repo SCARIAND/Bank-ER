@@ -5,8 +5,6 @@ import '../models/done.dart';
 
 import '../providers/done_provider.dart';
 
-
-
 class DoneNotifier extends ChangeNotifier {
   final _doneProvider = DoneProvider();
 
@@ -16,10 +14,8 @@ class DoneNotifier extends ChangeNotifier {
     done = await _doneProvider.addContacts(contacts);
     notifyListeners();
   }
-
-
-
 }
+
 class DoneState extends InheritedNotifier<DoneNotifier> {
   const DoneState({
     super.key,
@@ -31,5 +27,3 @@ class DoneState extends InheritedNotifier<DoneNotifier> {
     return context.dependOnInheritedWidgetOfExactType<DoneState>()!.notifier!;
   }
 }
-
-
