@@ -6,7 +6,8 @@ class ContactsProvider {
     final json = await Api.get('/all-contacts');
 
 
-    return (json['all-contacts'] as List)
+
+    return (json['/all-contacts'] as List)
         .map((contactJson) => ContactsData.fromJson(contactJson))
         .toList();
   }

@@ -51,8 +51,8 @@ class Activity extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const ExpensesScreen()));
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => const ExpensesScreen()));
                 },
                 child: const BoxCard(
                   boxContent: ActivityState(

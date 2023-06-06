@@ -18,9 +18,10 @@ class RecentUser extends StatelessWidget {
         color: ThemeColors.container,
         child: Padding(
           padding: const EdgeInsets.only(top: 20, left: 25, right: 25),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const Text('Recent', style: ThemeFonts.r18),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('Recent', style: ThemeFonts.r18),
             Padding(
                 padding: const EdgeInsets.only(top: 15),
                 child: SizedBox(
@@ -59,9 +60,7 @@ class ContactsRecent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ContactsCubit, List<ContactsData>>(
-      builder: (context, state) {
-        return GestureDetector(
+    return GestureDetector(
           onTap: () => _navigateDone(context),
           child: Container(
             width: 142,
@@ -92,7 +91,6 @@ class ContactsRecent extends StatelessWidget {
             ),
           ),
         );
-      },
-    );
+
   }
 }
