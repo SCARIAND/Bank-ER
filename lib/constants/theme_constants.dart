@@ -19,6 +19,12 @@ class ThemeFonts {
     color: ThemeColors.text,
     height: 1.5,
   );
+  static const rs14 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+    color: ThemeColors.scaffold,
+    height: 1.5,
+  );
 
   static const rr14 = TextStyle(
     fontSize: 14,
@@ -30,6 +36,13 @@ class ThemeFonts {
     fontSize: 14,
     fontWeight: FontWeight.w700,
     color: ThemeColors.fadedText,
+    height: 1.5,
+  );
+
+  static const rrs15 = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w700,
+    color: ThemeColors.scaffold,
     height: 1.5,
   );
 

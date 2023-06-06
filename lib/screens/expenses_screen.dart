@@ -53,10 +53,10 @@ class ExpensesScreen extends StatelessWidget {
               ),
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 38, right: 31),
-            child: ExpensesUser(),
-          ),
+          // const Padding(
+          //   padding: EdgeInsets.only(left: 38, right: 31),
+          //   child: ExpensesUser(),
+          // ),
         ],
       ),
     );

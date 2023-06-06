@@ -22,7 +22,7 @@ class _AppState extends State<App> {
       providers: [
         BlocProvider(create: (_) => BalanceCubit()),
         BlocProvider(create: (_) => ContactsCubit()..load()),
-        BlocProvider(create: (_) => TransactionsProvider()..load()),
+        // BlocProvider(create: (_) => TransactionsProvider()..load()),
 
       ],
       child: MaterialApp(

@@ -75,7 +75,8 @@ class _VerificationState extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(top: 5, bottom: 5, left: 40),
             child: Text(
-                'You spent \$2,732 on dining out this month. Let’s try to make it lower'),
+                'When you register for an account, we collectt personal informmation',
+                style: ThemeFonts.r14),
           ),
         ],
       ),
@@ -84,11 +85,8 @@ class _VerificationState extends StatelessWidget {
         child: TextButton(
           onPressed: () {},
           child: const Text(
-            'Tell me more',
-            style: TextStyle(
-              fontSize: 14,
-              decoration: TextDecoration.none,
-            ),
+            'Continue',
+              style: ThemeFonts.rs14
           ),
         ),
       ),

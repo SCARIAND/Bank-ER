@@ -40,20 +40,17 @@ class _PromoState extends StatelessWidget {
           children: [
             Row(
               children: const [
-                Text('Personal Information', style: ThemeFonts.rr14),
+                Text('Share Invite your friends!', style: ThemeFonts.rr14),
               ],
             ),
             const SizedBox(height: 14),
-            const Text(
-                'You spent \$2,732 on dining out this month. Let’s try to make it lower'),
+             Text(
+                'Invite friends register on our app. For every user you invite. you can earn up \$12'),
             TextButton(
               onPressed: () {},
               child: const Text(
-                'Tell me more',
-                style: TextStyle(
-                  fontSize: 14,
-                  decoration: TextDecoration.none,
-                ),
+                'Invite Now',
+                  style: ThemeFonts.rs14
               ),
             ),
           ],
