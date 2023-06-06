@@ -28,7 +28,7 @@ class ExpensesScreen extends StatelessWidget {
                   ),
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const HomeScreen()));
+                        builder: (context) =>  HomeScreen()));
                   },
                 ),
                 backgroundColor: ThemeColors.container,

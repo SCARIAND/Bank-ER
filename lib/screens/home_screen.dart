@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'package:todo/constants/theme_constants.dart';
 
@@ -13,13 +14,20 @@ import '../models/balance_data.dart';
 import '../state/balance_cubit.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-  // final _refreshController = RefreshController();
+   HomeScreen({Key? key}) : super(key: key);
+  final _refreshController = RefreshController();
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: CustomScrollView(
+    return  Scaffold(
+
+      body: SmartRefresher(
+        controller: _refreshController,
+        onRefresh: () async {
+          await context.read<BalanceCubit>();
+          _refreshController.refreshCompleted();
+        },
+        child: const CustomScrollView(
         slivers: [
           SliverAppBar(
             pinned: true,
@@ -36,6 +44,7 @@ class HomeScreen extends StatelessWidget {
           SliverToBoxAdapter(child: Promo()),
         ],
       ),
+      )
     );
   }
 }
