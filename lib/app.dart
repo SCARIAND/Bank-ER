@@ -15,7 +15,7 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  final _doneNotifier = DoneNotifier();
+
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
