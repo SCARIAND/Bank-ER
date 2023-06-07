@@ -8,7 +8,7 @@ part of 'contats_data.dart';
 
 ContactsData _$ContactsDataFromJson(Map<String, dynamic> json) => ContactsData(
       name: json['name'] as String,
-      phone: int.parse(json['phone']) as String,
+      phone: json['phone'] as String,
       avatar: json['avatar'] as String,
       registered: json['registered'] as bool,
     );

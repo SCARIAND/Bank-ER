@@ -8,7 +8,7 @@ class Api {
             "https://raw.githubusercontent.com/zetxks/tms_api/main/project-3"),
   );
 
-  static Future<Map<String,dynamic>> get(String method) async {
+  static Future<dynamic> get(String method) async {
     final response = await _dio.get('$method.json');
     return  jsonDecode(response.data);
   }

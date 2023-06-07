@@ -4,11 +4,8 @@ import 'api.dart';
 class ContactsProvider {
   Future<List<ContactsData>> getContacts() async {
     final json = await Api.get('/all-contacts');
-
-
-
-    return (json['/all-contacts'] as List)
-        .map((contactJson) => ContactsData.fromJson(contactJson))
+    return (json as List)
+        .map((json) => ContactsData.fromJson(json))
         .toList();
   }
 }

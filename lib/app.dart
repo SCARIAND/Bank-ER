@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:todo/screens/bank_screen.dart';
-import 'package:todo/screens/home_screen.dart';
+
 import 'package:todo/state/balance_cubit.dart';
 import 'package:todo/state/contats_cubit.dart';
+import 'package:todo/state/transactions_cubit.dart';
 
 
 class App extends StatefulWidget {
@@ -21,7 +23,7 @@ class _AppState extends State<App> {
       providers: [
         BlocProvider(create: (_) => BalanceCubit()),
         BlocProvider(create: (_) => ContactsCubit()..load()),
-        // BlocProvider(create: (_) => TransactionsProvider()..load()),
+        BlocProvider(create: (_) => TransactionsCubit()..load()),
 
       ],
       child: MaterialApp(

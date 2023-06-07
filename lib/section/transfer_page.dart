@@ -14,7 +14,7 @@ class TransferPage extends StatelessWidget {
     return BlocBuilder<ContactsCubit, List<ContactsData>>(
       builder: (context, state) {
         return Padding(
-          padding: const EdgeInsets.only(left: 25, right: 25),
+          padding: const EdgeInsets.only(left: 25, right: 25, top: 25, bottom: 23),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
