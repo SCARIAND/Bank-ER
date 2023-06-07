@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../models/transactions_data.dart';
 import '../providers/transactions_provider.dart';
 

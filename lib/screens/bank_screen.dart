@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todo/screens/home_screen.dart';
-
 import '../constants/theme_constants.dart';
 
 class BankScreen extends StatelessWidget {

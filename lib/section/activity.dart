@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo/screens/transfer_screen.dart';
-
 import '../constants/theme_constants.dart';
-
 import '../screens/expenses_screen.dart';
-
 import '../screens/transfer_amount_screen.dart';
 import 'box_cards.dart';
 

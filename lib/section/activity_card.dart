@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../constants/theme_constants.dart';
-
 import 'activity.dart';
 import 'box_cards.dart';
 

@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../models/balance_data.dart';
 import '../providers/balance_provider.dart';
 

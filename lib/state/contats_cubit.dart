@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../models/contats_data.dart';
 import '../providers/contats_provider.dart';
 

@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../constants/theme_constants.dart';
 import '../models/transactions_data.dart';
 import '../state/transactions_cubit.dart';
@@ -23,8 +21,7 @@ class ExpensesUser extends StatelessWidget {
               itemCount: state.length,
               itemBuilder: (context, index) =>
                   TransactionsUser(transact: state[index]),
-              separatorBuilder: (context, index) =>
-              const Divider(
+              separatorBuilder: (context, index) => const Divider(
                 height: 5,
                 color: ThemeColors.primary,
                 thickness: 2,
@@ -98,4 +95,3 @@ class TransactionsUser extends StatelessWidget {
     );
   }
 }
-

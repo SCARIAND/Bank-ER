@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../constants/theme_constants.dart';
 import 'box_cards.dart';
 
@@ -29,33 +28,33 @@ class _PromoState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
-          child: Image.asset('assets/images/free.png')),
-      Padding(
-        padding: const EdgeInsets.all(21),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: const [
-                Text('Share Invite your friends!', style: ThemeFonts.rr14),
-              ],
-            ),
-            const SizedBox(height: 14),
-             Text(
-                'Invite friends register on our app. For every user you invite. you can earn up \$12'),
-            TextButton(
-              onPressed: () {},
-              child: const Text(
-                'Invite Now',
-                  style: ThemeFonts.rs14
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
+            child: Image.asset('assets/images/free.png')),
+        Padding(
+          padding: const EdgeInsets.all(21),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: const [
+                  Text('Share Invite your friends!', style: ThemeFonts.rr14),
+                ],
               ),
-            ),
-          ],
+              const SizedBox(height: 14),
+              Text(
+                  'Invite friends register on our app. For every user you invite. you can earn up \$12'),
+              TextButton(
+                onPressed: () {},
+                child: const Text('Invite Now', style: ThemeFonts.rs14),
+              ),
+            ],
+          ),
         ),
-      ),
-    ]);
+      ],
+    );
   }
 }

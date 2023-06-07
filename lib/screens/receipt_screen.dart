@@ -1,19 +1,19 @@
-
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../constants/theme_constants.dart';
-import '../state/done_state.dart';
+import '../state/done_cubut.dart';
 
 class ReceiptScreen extends StatelessWidget {
   const ReceiptScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final done = DoneState.of(context).done;
+    final name = context.watch<DoneCubit>().state;
 
     return Scaffold(
-        backgroundColor: ThemeColors.scaffold,
-        body: Column(children: [
+      backgroundColor: ThemeColors.scaffold,
+      body: Column(
+        children: [
           Stack(
             children: [
               const Padding(
@@ -78,39 +78,40 @@ class ReceiptScreen extends StatelessWidget {
                   ),
                 ),
                 const ContentLine(),
-                ...done.contactss.map(
-                  (contacts) => Padding(
-                    padding:
-                        const EdgeInsets.only(left: 24, right: 24, top: 172),
-                    child: SizedBox(
-                        height: 99,
-                        child: Row(
-                          children: [
-                            Container(
+                Padding(
+                  padding: const EdgeInsets.only(left: 24, right: 24, top: 172),
+                  child: SizedBox(
+                      height: 99,
+                      child: Row(
+                        children: [
+                          ...name.names.map(
+                            (contact) => Container(
                                 width: 54,
                                 height: 54,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
-                                    image: NetworkImage(contacts.avatar),
+                                    image: NetworkImage(contact.avatar),
                                   ),
                                 )),
-                            Padding(
+                          ),
+                          ...name.names.map(
+                            (contact) => Padding(
                               padding: const EdgeInsets.only(left: 18, top: 32),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   const Text('Recipient',
                                       style: ThemeFonts.rs12),
-                                  Text(contacts.name, style: ThemeFonts.rr16),
+                                  Text(contact.name, style: ThemeFonts.rr16),
                                 ],
                               ),
                             ),
-                            const Expanded(child: SizedBox()),
-                          ],
-                        )),
-                  ),
+                          )
+                          // Expanded(child: SizedBox()),
+                        ],
+                      )),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 12, right: 12, top: 242),
@@ -140,7 +141,7 @@ class ReceiptScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: const [
                             Text('Amount sent', style: ThemeFonts.rs12),
-                            Text('\$', style: ThemeFonts.rr16),
+                            Text('\$ 100', style: ThemeFonts.rr16),
 
                             // Text('\$46.09', style: ThemeFonts.rr16),
                           ],
@@ -187,6 +188,8 @@ class ReceiptScreen extends StatelessWidget {
                   style: ThemeFonts.r17, textAlign: TextAlign.center),
             ),
           ),
-        ]));
+        ],
+      ),
+    );
   }
 }

@@ -183,7 +183,6 @@ class ThemeFonts {
     color: ThemeColors.textBar,
     height: 1.5,
   );
-
 }
 
 class ContentLine extends StatelessWidget {

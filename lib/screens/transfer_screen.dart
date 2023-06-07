@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../constants/theme_constants.dart';
-
 import '../section/recent.dart';
 import '../section/transfer_page.dart';
 import '../section/transfer_user.dart';

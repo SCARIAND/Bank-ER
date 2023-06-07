@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../constants/theme_constants.dart';
 
 class TransferUser extends StatelessWidget {
-
-
   const TransferUser({Key? key}) : super(key: key);
 
   @override
@@ -15,11 +12,7 @@ class TransferUser extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text(
-            'Transfer',
-            style: ThemeFonts.rrr20
-
-          ),
+          const Text('Transfer', style: ThemeFonts.rrr20),
           const SizedBox(
             height: 24,
           ),
@@ -54,7 +47,6 @@ class TransferUser extends StatelessWidget {
   }
 }
 
-
 class HomeServiceItem extends StatelessWidget {
   final String icon;
   final String title;
@@ -81,14 +73,8 @@ class HomeServiceItem extends StatelessWidget {
           ),
           alignment: Alignment.center,
           child: SvgPicture.asset(icon),
-
-            ),
-
-
-        Text(
-          title,
-          style: ThemeFonts.rr12),
-
+        ),
+        Text(title, style: ThemeFonts.rr12),
       ],
     );
   }

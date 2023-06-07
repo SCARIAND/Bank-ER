@@ -1,11 +1,13 @@
 import '../models/contats_data.dart';
-import '../models/done.dart';
+import '../models/done_data.dart';
 
-class DoneProvider {
-  final _done = Done();
+class NameProvider {
+  DoneData _name = DoneData([]);
 
-  Future<Done> addContacts(ContactsData contacts) async {
-    _done.addContacts(contacts);
-    return _done;
+  Future<DoneData> addContacts(ContactsData contacts) async {
+    _name.addContacts(contacts);
+
+    _name = DoneData([..._name.names, contacts]);
+    return _name;
   }
 }

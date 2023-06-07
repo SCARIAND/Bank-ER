@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../constants/color_dot.dart';
 import '../constants/theme_constants.dart';
 import '../models/balance_data.dart';

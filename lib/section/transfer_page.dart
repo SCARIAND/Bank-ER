@@ -12,7 +12,7 @@ class TransferPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ContactsCubit, List<ContactsData>>(
-      builder: (context, state) {
+      builder: (context, contacts) {
         return Padding(
           padding: const EdgeInsets.only(left: 25, right: 25, top: 25, bottom: 23),
           child: Column(
@@ -43,9 +43,9 @@ class TransferPage extends StatelessWidget {
                       scrollDirection: Axis.vertical,
                       shrinkWrap: true,
                       padding: const EdgeInsets.all(10),
-                      itemCount: state.length,
+                      itemCount: contacts.length,
                       itemBuilder: (context, index) =>
-                          ContactsUser(contact: state[index]),
+                          ContactsUser(contact: contacts[index]),
                       separatorBuilder: (context, index) => const Divider(
                         height: 20,
                         color: ThemeColors.primary,
