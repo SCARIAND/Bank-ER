@@ -16,30 +16,31 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SmartRefresher(
-      controller: _refreshController,
-      onRefresh: () async {
-        await context.read<BalanceCubit>();
-        _refreshController.refreshCompleted();
-      },
-      child: const CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            pinned: true,
-            backgroundColor: ThemeColors.scaffold,
-            expandedHeight: 125,
-            flexibleSpace: FlexibleSpaceBar(
-              expandedTitleScale: 1,
-              title: InfoUser(),
+      body: SmartRefresher(
+        controller: _refreshController,
+        onRefresh: () async {
+          await context.read<BalanceCubit>();
+          _refreshController.refreshCompleted();
+        },
+        child: const CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              pinned: true,
+              backgroundColor: ThemeColors.scaffold,
+              expandedHeight: 125,
+              flexibleSpace: FlexibleSpaceBar(
+                expandedTitleScale: 1,
+                title: InfoUser(),
+              ),
             ),
-          ),
-          SliverToBoxAdapter(child: Spent()),
-          SliverToBoxAdapter(child: Activity()),
-          SliverToBoxAdapter(child: Verification()),
-          SliverToBoxAdapter(child: Promo()),
-        ],
+            SliverToBoxAdapter(child: Spent()),
+            SliverToBoxAdapter(child: Activity()),
+            SliverToBoxAdapter(child: Verification()),
+            SliverToBoxAdapter(child: Promo()),
+          ],
+        ),
       ),
-    ));
+    );
   }
 }
 

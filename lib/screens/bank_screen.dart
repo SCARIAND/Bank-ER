@@ -22,7 +22,7 @@ class BankScreen extends StatelessWidget {
                   ),
                 ),
                 const Text('Bank EC', style: ThemeFonts.r70),
-                const Text('Bank, Finance Kit', style: ThemeFonts.rrr20),
+                const Text('Bank, Finance Kit', style: ThemeFonts.r20),
                 const SizedBox(height: 18),
                 Container(
                   margin: const EdgeInsets.symmetric(
