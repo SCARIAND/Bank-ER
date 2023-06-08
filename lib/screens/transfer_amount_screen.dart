@@ -282,7 +282,7 @@ class CustomFilledButton extends StatelessWidget {
         style: TextButton.styleFrom(
           backgroundColor: ThemeColors.scaffold,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(20),
           ),
         ),
         child: Text(title, style: ThemeFonts.rr17),

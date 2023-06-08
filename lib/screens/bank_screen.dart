@@ -60,6 +60,9 @@ class BankScreen extends StatelessWidget {
                           style: TextButton.styleFrom(
                             backgroundColor: ThemeColors.scaffold,
                             foregroundColor: ThemeColors.textBar,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                             padding: const EdgeInsets.all(10.0),
                           ),
                           child:
