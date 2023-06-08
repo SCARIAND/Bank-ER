@@ -22,39 +22,40 @@ class TransferPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 25, bottom: 23),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 8),
-                    TextFormField(
-                      decoration: InputDecoration(
-                        prefixIcon: const Padding(
-                          padding: EdgeInsets.only(left: 22, right: 18),
-                          child: Icon(Icons.search),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 8),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          prefixIcon: const Padding(
+                            padding: EdgeInsets.only(left: 22, right: 18),
+                            child: Icon(Icons.search),
+                          ),
+                          hintText: 'search name or number..',
+                          hintStyle: ThemeFonts.rrs14,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          contentPadding: const EdgeInsets.all(14),
                         ),
-                        hintText: 'search name or number..',
-                        hintStyle: ThemeFonts.rrs14,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
+                      ),
+                      ListView.separated(
+                        scrollDirection: Axis.vertical,
+                        shrinkWrap: true,
+                        padding: const EdgeInsets.all(10),
+                        itemCount: contacts.length,
+                        itemBuilder: (context, index) =>
+                            ContactsUser(contact: contacts[index]),
+                        separatorBuilder: (context, index) => const Divider(
+                          height: 20,
+                          color: ThemeColors.primary,
+                          thickness: 2,
                         ),
-                        contentPadding: const EdgeInsets.all(14),
-                      ),
-                    ),
-                    ListView.separated(
-                      scrollDirection: Axis.vertical,
-                      shrinkWrap: true,
-                      padding: const EdgeInsets.all(10),
-                      itemCount: contacts.length,
-                      itemBuilder: (context, index) =>
-                          ContactsUser(contact: contacts[index]),
-                      separatorBuilder: (context, index) => const Divider(
-                        height: 20,
-                        color: ThemeColors.primary,
-                        thickness: 2,
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
-              ),
+
             ],
           ),
         );

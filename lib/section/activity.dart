@@ -79,7 +79,7 @@ class ActivityState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 60,
+      width: 66,
       child: Column(
         children: [
           Padding(
@@ -96,7 +96,7 @@ class ActivityState extends StatelessWidget {
               child: icon,
             ),
           ),
-          Text(text),
+          Text(text,style: ThemeFonts.r12),
         ],
       ),
     );

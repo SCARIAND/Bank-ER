@@ -22,6 +22,7 @@ class ActivityCard extends StatelessWidget {
                   boxContent: ActivityState(
                     icon: Icon(Icons.lock, color: ThemeColors.textBar),
                     text: 'Lock Card',
+
                   ),
                 ),
               ),
@@ -30,7 +31,7 @@ class ActivityCard extends StatelessWidget {
                 child: const BoxCard(
                   boxContent: ActivityState(
                     icon: Icon(Icons.shield, color: ThemeColors.textBar),
-                    text: 'Change PIN',
+                    text: 'Chang PIN',
                   ),
                 ),
               ),
