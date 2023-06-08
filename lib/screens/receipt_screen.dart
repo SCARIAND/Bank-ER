@@ -25,14 +25,15 @@ class ReceiptScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 48.0, left: 71, right: 90),
                 child: Container(
-                    width: 250,
-                    height: 80,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        // fit: BoxFit.cover,
-                        image: AssetImage('assets/images/shapes.png'),
-                      ),
-                    )),
+                  width: 250,
+                  height: 80,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      // fit: BoxFit.cover,
+                      image: AssetImage('assets/images/shapes.png'),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
@@ -78,14 +79,15 @@ class ReceiptScreen extends StatelessWidget {
                   ),
                 ),
                 const ContentLine(),
-                Padding(
-                  padding: const EdgeInsets.only(left: 30, right: 24, top: 150),
-                  child: SizedBox(
-                    height: 99,
-                    child: Row(
-                      children: [
-                        ...name.names.map(
-                          (contact) => Container(
+                ...name.names.map(
+                  (contact) => Padding(
+                    padding:
+                        const EdgeInsets.only(left: 30, right: 24, top: 150),
+                    child: SizedBox(
+                      height: 99,
+                      child: Row(
+                        children: [
+                          Container(
                               width: 54,
                               height: 54,
                               decoration: BoxDecoration(
@@ -95,9 +97,7 @@ class ReceiptScreen extends StatelessWidget {
                                   image: NetworkImage(contact.avatar),
                                 ),
                               )),
-                        ),
-                        ...name.names.map(
-                          (contact) => Padding(
+                          Padding(
                             padding: const EdgeInsets.only(left: 18, top: 32),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,8 +107,8 @@ class ReceiptScreen extends StatelessWidget {
                               ],
                             ),
                           ),
-                        )
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -161,23 +161,23 @@ class ReceiptScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                    padding:
-                        const EdgeInsets.only(left: 47, right: 47, top: 435),
-                    child: SizedBox(
-                      width: double.infinity,
-                      child: TextButton(
-                        onPressed: () {},
-                        style: TextButton.styleFrom(
-                          backgroundColor: ThemeColors.scaffold,
-                          foregroundColor: ThemeColors.textBar,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.only(left: 47, right: 47, top: 435),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: TextButton(
+                      onPressed: () {},
+                      style: TextButton.styleFrom(
+                        backgroundColor: ThemeColors.scaffold,
+                        foregroundColor: ThemeColors.textBar,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        child: const Text('Share', style: ThemeFonts.rr17),
+                        padding: const EdgeInsets.all(10.0),
                       ),
-                    )),
+                      child: const Text('Share', style: ThemeFonts.rr17),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
